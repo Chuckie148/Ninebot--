@@ -3,7 +3,7 @@ name: 九号出行自动签到
 # 触发条件：每天早上12点运行 + 允许手动触发
 on:
   schedule:
-    - cron: '0 12 * * *'  # 北京时间12点
+    - cron: '0 4 * * *'  # 北京时间12点
   workflow_dispatch:
 
 jobs:
