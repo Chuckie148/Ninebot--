@@ -1,9 +1,9 @@
 name: 九号出行自动签到
 
-# 触发条件：每天早上12点运行 + 允许手动触发
+# 触发条件：每天 14:00 (北京时间)
 on:
   schedule:
-    - cron: '0 4 * * *'  # 北京时间12点
+    - cron: '0 6 * * *'  # UTC 时间 06:00 = 北京时间 14:00
   workflow_dispatch:
 
 jobs:
@@ -33,4 +33,3 @@ jobs:
           BARK_GROUP: ${{ secrets.BARK_GROUP }}
           BARK_ICON: ${{ secrets.BARK_ICON }}
           BARK_URL: ${{ secrets.BARK_URL }}
-          # 其他Bark参数按需添加
